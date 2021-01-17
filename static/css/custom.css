@@ -1,0 +1,148 @@
+/* navbar color overwrite*/
+.navbar
+{
+background-color: #041738;
+color: white;
+}
+/*Serach Button clor to meet Navic Logo*/
+.AB1
+{
+background-color: #d63f0d;
+}
+.AB2 li
+{
+color:#041738;
+}
+/*navbar-brand custom style google font */
+.navbar-brand
+{
+font-family: 'Oswald', sans-serif;
+font-family: 'Rubik', sans-serif;
+}
+/* footer Design */
+.footer-main-div
+{
+width: 100%;
+height: auto;
+margin: auto;
+background-color: #041738;
+padding: 30px 30px;
+}
+/* adjustment of social icons */
+
+.footer-social-icons
+{
+  width: 100%;
+  height: auto;
+  margin:auto;
+}
+
+/* adjustment of social icons of order list */
+.footer-social-icons ul
+{
+  marign:10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-social-icons ul li
+{
+display: inline-block;
+width: 50px;
+height: 50px;
+margin:0px 20px;
+border-radius: 100%;
+background-color: #90e35f;  /* for social icons background color */
+}
+
+.footer-social-icons ul li a
+{
+  color:#d63f0d;
+  font-size: 30px;
+  display: block;
+}
+
+.footer-social-icons ul li a i
+{
+  line-height:50px;
+}
+
+/* adjustment of footer-menu-one */
+
+.footer-menu-one
+{
+width: 100%;
+height: auto;
+margin: auto;
+margin-top: 20px;
+}
+
+/* adjustment of footer-menu-one ul tag data in to center */
+.footer-menu-one ul
+{
+margin: 0px;
+padding: 0px;
+text-align: center;
+}
+
+/* adjustment of footer-menu-one ul  li tag data in to one line */
+.footer-menu-one ul li
+{
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+.footer-menu-one ul li a
+{
+font-family: arial;
+font-size: 15px;
+font-weight:600;
+color: #fff;
+text-transform: uppercase;
+}
+/* adjustment of footer-menu-two  */
+
+.footer-menu-two
+{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+}
+/* adjustment of footer-menu-two ul tag data in to center */
+.footer-menu-two ul
+{
+margin: 0px;
+padding: 0px;
+text-align: center;
+}
+/* adjustment of footer-menu-two ul  li tag data in to one line */
+.footer-menu-two ul li
+{
+  display: inline-block;
+  margin:0px 20px;
+}
+
+.footer-menu-two ul li a
+{
+  text-transform: uppercase;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/*adjustment of footer-menu-three */
+.footer-menu-three
+{
+margin-top: 25px;
+color: #fff;
+font-family: arial;
+font-size: 15px;
+text-align: center;
+text-transform: uppercase;
+}
+.footer-menu-three strong
+{
+color: #d63f0d;
+}

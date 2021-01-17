@@ -1,0 +1,11 @@
+{% extends "navic_part1/base.html" %}
+
+{% block title %}
+ Thank You
+ {% endblock %}
+
+ {% block content %}
+ <h1>Thank You</h1>
+ <p>Your order has been successfully completed</p><br>
+ <p>Your Order Number is:<strong>{{ order.id }}</strong></p>
+ {% endblock %}

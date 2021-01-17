@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}NaVic{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+    <!-- Latest compiled and minified CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Rubik&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f4b0703688.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <div id="header">
+    <a href="/" class="logo">NaVic</a>
+  </div>
+  <div id="subheader">
+    <div class="cart">
+     {% with total_items=cart|length %}
+       {% if total_items > 0 %}
+         Your Cart:
+         <a href="{% url "cart:cart_detail" %}">
+           {{ total_items }}item{{ total_items|pluralize }},
+           ₹{{ cart.get_total_price_after_discount }}
+         </a>
+         {% else %}
+          Your Cart is Empty.
+          {% endif %}
+          {% endwith %}
+    </div>
+  </div>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+
+  </div>
+  <div class="footer-main-div">
+      <div class="footer-social-icons">
+        <ul>
+          <li><a href="https://facebook.com" target="blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://gmail.com" target="blank"><i class="fab fa-google-plus-g"></i></a></li>
+          <li><a href="https://twitter.com" target="blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://youtube.com" target="blank"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-menu-one">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">services</a></li>
+          <li><a href="#">contact us</a></li>
+        </ul>
+      </div>
+      <div class="footer-menu-two">
+        <ul>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-menu-three">
+        <strong>designed-by:NaVic Team 2020</strong>
+
+      </div>
+    </div>
+  </body>
+</html>

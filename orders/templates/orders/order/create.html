@@ -1,0 +1,37 @@
+{% extends "navic_part1/base.html" %}
+
+{% block title %}
+  Checkout
+{% endblock %}
+
+{% block content %}
+  <h1>Checkout</h1>
+
+  <div class="order-info">
+    <h3>Your Order</h3>
+     <ul>
+       {% for item in cart %}
+       <li>
+         {{ item.quantity }}x {{ item.product.name }}
+         <span>₹{{ item.total_price|floatformat:2 }}</span>
+       </li>
+       {% endfor %}
+       {% if cart.coupon %}
+       <li>
+         "{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% off)
+         <span class="neg"> - ₹{{ cart.get_discount|floatformat:2 }}</span>
+       </li>
+       {% endif %}
+       <br>
+        <li class="neg">Delivery charge:<span>{% if cart.get_total_price_before_delivery < 400 %}₹{{ 30|floatformat:2 }}{% else %}₹{{ 0|floatformat:2 }}{% endif %}</span></li><br>
+     </ul>
+
+     <p>Total: ₹{{ cart.get_total_price_after_discount|floatformat:2 }}</p>
+  </div>
+
+<form class="order-form" action="" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <p><input type="submit" name="" value="Place order"></p>
+</form>
+{% endblock %}
