@@ -1,8 +1,9 @@
 # NaVic
+
 NaVic is a Ecommerce paltform for dealing with online shopping.
 
 
-##Technology used
+
 ```
 Django(3.0)
 Python(3.8)
@@ -12,7 +13,14 @@ CSS 3
 Bootstrap 4
 
 ```
+## Important KeyPoint of Project
+```
+celery 
 
+# why we use Celery
+Celery 
+
+```
 
 
 
