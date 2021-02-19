@@ -3,7 +3,7 @@
 NaVic is a Ecommerce paltform for dealing with online shopping.
 
 
-
+## Technology Used
 ```
 Django(3.0)
 Python(3.8)
@@ -17,8 +17,10 @@ Bootstrap 4
 ```
 celery 
 
-# why we use Celery
-Celery 
+Que1- why we use Celery ?
+Celery is a distributed task queue that can process vast amounts of message . Using Celery , not only can you create asynchronous tasks easily and let them be executed by workers as soon as possible,but you can also schedule them to run at a specific time.
++
+
 
 ```
 
